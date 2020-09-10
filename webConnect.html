@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Formulaire</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <!----<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>---->
+        
+    </head>
+    <body>
+    <!----<h1>MukApps</h1>---->
+    <div id="bloc">
+        <div class="bloc_rotate">
+            <img src="barre.png" alt="barre" width="150px">
+        </div>
+        <div class="bloc_rotate2">
+            <img src="barre1.png" alt="barre" width="150px">
+        </div>
+        <div class="text">
+            <h1>Create Profile</h1>
+            <p>In order to create your account please fill 
+                out the following detail
+            </p>
+            <img src="logo.jpg" alt="logo" class="log"width="130px" height="119px">
+        </div>
+
+    <div class="formulaire">
+    <form method="POST" id="register">
+        <label name="Nom">Username</label><br>
+        <input type="text" name="user" placeholder="Saisir votre nom" class="Input" id="nom">
+        <br><br>
+        <label name="Nom">Password<label><br>
+        <input type="password" name="user" placeholder="Saisir votre Password" class="Input" id="password">
+        <br><br>
+        <label name="Nom">Confirmation password<label><br>
+        <input type="password" name="user" placeholder="Saisir a nouveau" class="Input" id="password1">
+        <br><br>
+        <input type="submit" value="Start" class="button" id="envoyer">
+    </form>
+    </div>
+    <!----<script type="text/javascript">
+    $(function(){
+        $('#envoyer').submit(function(){
+            valid=true;
+            if($("#nom").val() == ""){
+                $("#nom").css("boder-color","#516190")
+                valid=false;
+            }
+            if($("#password").val() == ""){
+                $("#password").css("boder-color","#516190")
+                valid=false;
+            }
+            if($("#password1").val() == ""){
+                $("#password1").css("boder-color","#516190")
+                valid=false;
+            }
+            return valid;
+            alert('Formulaire envoyer');
+        });
+
+});
+    </script>---->
+   <script src="Form.js"></script>
+    <!----<h1>MukApps</h1>---->
+    </div>
+    </body>
+</html>
