@@ -25,41 +25,50 @@
         </div>
 
     <div class="formulaire">
-    <form method="POST" id="register">
+    <form method="POST"  action="" id="register">
         <label name="Nom">Username</label><br>
-        <input type="text" name="user" placeholder="Saisir votre nom" class="Input" id="nom">
-        <p style="color: red;" id="erreur"></p>
+        <input type="text" name="user" placeholder="Saisir votre nom" class="Input" id="nom"  autofocus>
         <br><br>
         <label name="Nom">Password<label><br>
-        <input type="password" name="user" placeholder="Saisir votre Password" class="Input" id="password">
+        <input type="password" name="user" placeholder="Saisir votre Password" class="Input" id="password" required>
         <br><br>
         <label name="Nom">Confirmation password<label><br>
-        <input type="password" name="user" placeholder="Saisir a nouveau" class="Input" id="password1">
+        <input type="password" name="user" placeholder="Saisir a nouveau" class="Input" id="password1" required>
         <br><br>
         <input type="submit" value="Start" class="button" id="envoyer">
+        <p style="color: red;" id="erreur"></p>
     </form>
     </div>
     <!----<script type="text/javascript">
-    $(function(){
-        $('#envoyer').submit(function(){
-            valid=true;
-            if($("#nom").val() == ""){
-                $("#nom").css("boder-color","#516190")
-                valid=false;
-            }
-            if($("#password").val() == ""){
-                $("#password").css("boder-color","#516190")
-                valid=false;
-            }
-            if($("#password1").val() == ""){
-                $("#password1").css("boder-color","#516190")
-                valid=false;
-            }
-            return valid;
-            alert('Formulaire envoyer');
-        });
+    document.getElementById("register").addEventListener("submit", function(e){
+    e.preventDefault(); // action permettant de cacher les contenus du champ
+    
+    // declaration des variables 
+    // recuperations des champs et notion d'erreur (pas des champ vide)
+    var erreur;
+    var nom=document.getElementById("nom");
+    var password=document.getElementById("password");
+    var confirmation=document.getElementById("password1");
+    
+    
+    if(confirmation.value !== password.value){
+        erreur="Mot de passe incorrecte"
+    }
 
+    if(!nom.value){
+       erreur="veuillez renseignez  le nom en premier"
+   }
+
+    if (erreur){
+       e.preventDefault();
+       document.getElementById("erreur").innerHTML=erreur;
+       return false;
+    }
+    else{
+       alert('formulaire envoyé')
+    } 
 });
+    
     </script>---->
    <script src="Form.js"></script>
     <!----<h1>MukApps</h1>---->
